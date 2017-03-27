@@ -1,3 +1,5 @@
+'use strict';
+
 const { Router } = require('express');
 const path = require('path');
 
@@ -15,8 +17,8 @@ gameRouter.get('/videogames', (req, res, next) => {
 
 gameRouter.post('/videogames', (req, res, next) => {
   console.log("submitting a form post request for videogames");
-  // res.send("Go outside and play")
-  next();
+  res.send("Go outside and play")
+  // next();
 });
 
 module.exports = gameRouter;
