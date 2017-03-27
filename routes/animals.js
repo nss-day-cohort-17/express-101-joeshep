@@ -25,6 +25,7 @@ animalRouter.get('/chickens', (req, res, next) => {
 
 animalRouter.post('/chickens', (req, res, next) => {
   console.log("Posting a form for chickens");
+  res.send("Nothing here but us chickens");
 });
 
 module.exports = animalRouter;
