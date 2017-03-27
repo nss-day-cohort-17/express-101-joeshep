@@ -6,6 +6,7 @@ const app = express();
 
 // routes modules
 const animalRoutes = require('./routes/animals');
+const gameRoutes = require('./routes/games');
 
 // middleware
 const requestTime = (req, res, next) => {
@@ -18,6 +19,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(requestTime);
 
 app.use(animalRoutes);
+app.use(gameRoutes);
 
 app.use( (req, res) => {
   res.send("Where do you think you're going? We only have monkeys and chickens here.")

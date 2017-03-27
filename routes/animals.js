@@ -4,13 +4,13 @@ const path = require('path');
 const animalRouter = Router();
 
 // Applying middleware to all routes in the router
-animalRouter.use(function (req, res, next) {
-  if (req.user === 'farmer') {
-    next()
-  } else {
-    res.status(403).send('Forbidden')
-  }
-})
+// animalRouter.use(function (req, res, next) {
+//   if (req.user === 'farmer') {
+//     next()
+//   } else {
+//     res.status(403).send('Forbidden')
+//   }
+// });
 
 animalRouter.get('/monkeys', (req, res, next) => {
   console.log("Fetching some monkeys");
